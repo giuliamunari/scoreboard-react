@@ -26,7 +26,7 @@ export default class Scoreboard extends Component {
       renderPlayer = (player) => {
         return (
           <Player
-            id={player.id}
+            id = {player.id}
             name={player.name}
             score={player.score}
             key={player.id}
@@ -57,7 +57,7 @@ export default class Scoreboard extends Component {
         <ul>
           {
             this.state.players
-              .sort((a, b) => b.score - a.score)
+              .sort((playerOne, playerTwo) => playerTwo.score - playerOne.score )
               .map(this.renderPlayer)
           }
         </ul>
